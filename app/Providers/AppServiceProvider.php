@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // OBSERVERS
+        \App\Models\Contacts::observe(\App\Observers\ContactObserver::class);
     }
 }
